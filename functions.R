@@ -62,7 +62,6 @@ sampling_regular<-function(x,id,t,n,ma=TRUE,window,scale=TRUE){
     for(j in 1:n){ 
       x_mat[i,j]<-mean(x[t>=(t_new[j]-step) & t <=(t_new[j]+step) & id %in% levels(id)[i] ],na.rm=T)}}
   x_mat<-t(na_ma(t(x_mat)))
-  ##tolgo un pò di secondi alla fine
   if(scale) x_mat<-t(scale(t(x_mat)))
   list(x_mat=x_mat,t=t_new)
 }

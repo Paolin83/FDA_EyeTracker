@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.10.8)  28 NOV 2019 16:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.10.8)  6 DEC 2019 08:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -499,8 +499,7 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmarkwidth=\skip49
 \thanksmargin=\skip50
 \droptitle=\skip51
-)
-No file FA_psicostat.aux.
+) (./FA_psicostat.aux)
 \openout1 = `FA_psicostat.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 128.
@@ -595,6 +594,7 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 128.
 LaTeX Info: Redefining \pageref on input line 128.
 LaTeX Info: Redefining \nameref on input line 128.
+(./FA_psicostat.out) (./FA_psicostat.out)
 \@outlinefile=\write4
 \openout4 = `FA_psicostat.out'.
 
@@ -673,36 +673,378 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [1
 
 {c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<"""fig2_preda".jpg, id=32, 862.72313pt x 517.18219pt>
+<"""fig2_preda".jpg, id=65, 862.72313pt x 517.18219pt>
 File: """fig2_preda".jpg Graphic file (type jpg)
 <use """fig2_preda".jpg>
-Package pdftex.def Info: """fig2_preda".jpg  used on input line 236.
+Package pdftex.def Info: """fig2_preda".jpg  used on input line 251.
 (pdftex.def)             Requested size: 419.74979pt x 251.6301pt.
 
-Overfull \hbox (13.86969pt too wide) in paragraph at lines 236--237
+Overfull \hbox (13.86969pt too wide) in paragraph at lines 251--251
+[][] 
+ []
+
+[2 <./fig2_preda.jpg>]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 268.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 268.
+<"""ambigua".jpg, id=72, 210.5466pt x 119.9682pt>
+File: """ambigua".jpg Graphic file (type jpg)
+<use """ambigua".jpg>
+Package pdftex.def Info: """ambigua".jpg  used on input line 273.
+(pdftex.def)             Requested size: 155.02779pt x 88.3339pt.
+<"""maestra cattiva".jpg, id=73, 845.0772pt x 597.432pt>
+File: """maestra cattiva".jpg Graphic file (type jpg)
+<use """maestra cattiva".jpg>
+Package pdftex.def Info: """maestra cattiva".jpg  used on input line 273.
+(pdftex.def)             Requested size: 155.02156pt x 109.59334pt.
+<"""maestra-ostile-bambino-ostile".jpg, id=74, 845.0772pt x 597.432pt>
+File: """maestra-ostile-bambino-ostile".jpg Graphic file (type jpg)
+<use """maestra-ostile-bambino-ostile".jpg>
+Package pdftex.def Info: """maestra-ostile-bambino-ostile".jpg  used on input l
+ine 273.
+(pdftex.def)             Requested size: 155.02156pt x 109.59334pt.
+File: """ambigua".jpg Graphic file (type jpg)
+<use """ambigua".jpg>
+Package pdftex.def Info: """ambigua".jpg  used on input line 275.
+(pdftex.def)             Requested size: 155.02779pt x 88.3339pt.
+File: """maestra cattiva".jpg Graphic file (type jpg)
+<use """maestra cattiva".jpg>
+Package pdftex.def Info: """maestra cattiva".jpg  used on input line 275.
+(pdftex.def)             Requested size: 155.02156pt x 109.59334pt.
+<"""maestra-ostile-bambino-buono".jpg, id=75, 845.0772pt x 597.432pt>
+File: """maestra-ostile-bambino-buono".jpg Graphic file (type jpg)
+<use """maestra-ostile-bambino-buono".jpg>
+Package pdftex.def Info: """maestra-ostile-bambino-buono".jpg  used on input li
+ne 275.
+(pdftex.def)             Requested size: 155.02156pt x 109.59334pt.
+
+Overfull \hbox (31.31593pt too wide) in paragraph at lines 268--277
+[][] 
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
+82.
+(c:/texlive/2019/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 283.
+[3 <./ambigua.jpg> <./maestra cattiva.jpg> <./maestra-ostile-bambino-ostile.jpg
+> <./maestra-ostile-bambino-buono.jpg>]
+<"FA_psicostat_files/figure-latex/""carico intro-1".pdf, id=84, 469.755pt x 325
+.215pt>
+File: "FA_psicostat_files/figure-latex/""carico intro-1".pdf Graphic file (type
+ pdf)
+<use "FA_psicostat_files/figure-latex/""carico intro-1".pdf>
+Package pdftex.def Info: "FA_psicostat_files/figure-latex/""carico intro-1".pdf
+  used on input line 336.
+(pdftex.def)             Requested size: 419.75792pt x 290.60162pt.
+
+Overfull \hbox (13.87782pt too wide) in paragraph at lines 336--337
+[][] 
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+357.
+(c:/texlive/2019/texmf-dist/tex/latex/lm/ts1lmtt.fd
+File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [4 <./FA_psicostat_files/figure-latex/carico intro-1.pdf>]
+<"FA_psicostat_files/figure-latex/""carico intro-2".pdf, id=95, 469.755pt x 325
+.215pt>
+File: "FA_psicostat_files/figure-latex/""carico intro-2".pdf Graphic file (type
+ pdf)
+<use "FA_psicostat_files/figure-latex/""carico intro-2".pdf>
+Package pdftex.def Info: "FA_psicostat_files/figure-latex/""carico intro-2".pdf
+  used on input line 413.
+(pdftex.def)             Requested size: 419.75792pt x 290.60162pt.
+
+Overfull \hbox (13.87782pt too wide) in paragraph at lines 413--414
+[][] 
+ []
+
+<"FA_psicostat_files/figure-latex/""moving example-1".pdf, id=96, 469.755pt x 3
+25.215pt>
+File: "FA_psicostat_files/figure-latex/""moving example-1".pdf Graphic file (ty
+pe pdf)
+<use "FA_psicostat_files/figure-latex/""moving example-1".pdf>
+Package pdftex.def Info: "FA_psicostat_files/figure-latex/""moving example-1".p
+df  used on input line 427.
+(pdftex.def)             Requested size: 419.75792pt x 290.60162pt.
+
+Overfull \hbox (13.87782pt too wide) in paragraph at lines 427--433
+[][]
+ []
+
+[5 <./FA_psicostat_files/figure-latex/carico intro-2.pdf>]
+<"FA_psicostat_files/figure-latex/""moving average-1".pdf, id=106, 469.755pt x 
+325.215pt>
+File: "FA_psicostat_files/figure-latex/""moving average-1".pdf Graphic file (ty
+pe pdf)
+<use "FA_psicostat_files/figure-latex/""moving average-1".pdf>
+Package pdftex.def Info: "FA_psicostat_files/figure-latex/""moving average-1".p
+df  used on input line 460.
+(pdftex.def)             Requested size: 419.75792pt x 290.60162pt.
+
+Overfull \hbox (13.87782pt too wide) in paragraph at lines 460--461
+[][] 
+ []
+
+[6 <./FA_psicostat_files/figure-latex/moving example-1.pdf>]
+<"FA_psicostat_files/figure-latex/""moving average-2".pdf, id=116, 469.755pt x 
+325.215pt>
+File: "FA_psicostat_files/figure-latex/""moving average-2".pdf Graphic file (ty
+pe pdf)
+<use "FA_psicostat_files/figure-latex/""moving average-2".pdf>
+Package pdftex.def Info: "FA_psicostat_files/figure-latex/""moving average-2".p
+df  used on input line 469.
+(pdftex.def)             Requested size: 419.75792pt x 290.60162pt.
+
+Overfull \hbox (13.87782pt too wide) in paragraph at lines 469--470
+[][] 
+ []
+
+[7 <./FA_psicostat_files/figure-latex/moving average-1.pdf> <./FA_psicostat_fil
+es/figure-latex/moving average-2.pdf>]
+<"FA_psicostat_files/figure-latex/""moving average-3".pdf, id=133, 469.755pt x 
+325.215pt>
+File: "FA_psicostat_files/figure-latex/""moving average-3".pdf Graphic file (ty
+pe pdf)
+<use "FA_psicostat_files/figure-latex/""moving average-3".pdf>
+Package pdftex.def Info: "FA_psicostat_files/figure-latex/""moving average-3".p
+df  used on input line 477.
+(pdftex.def)             Requested size: 419.75792pt x 290.60162pt.
+
+Overfull \hbox (13.87782pt too wide) in paragraph at lines 477--481
+[][]
+ []
+
+<"FA_psicostat_files/figure-latex/""smooth-1".pdf, id=134, 469.755pt x 325.215p
+t>
+File: "FA_psicostat_files/figure-latex/""smooth-1".pdf Graphic file (type pdf)
+<use "FA_psicostat_files/figure-latex/""smooth-1".pdf>
+Package pdftex.def Info: "FA_psicostat_files/figure-latex/""smooth-1".pdf  used
+ on input line 507.
+(pdftex.def)             Requested size: 419.75792pt x 290.60162pt.
+
+Overfull \hbox (13.87782pt too wide) in paragraph at lines 507--508
+[][] 
+ []
+
+[8 <./FA_psicostat_files/figure-latex/moving average-3.pdf>]
+<"FA_psicostat_files/figure-latex/""smooth-2".pdf, id=146, 469.755pt x 325.215p
+t>
+File: "FA_psicostat_files/figure-latex/""smooth-2".pdf Graphic file (type pdf)
+<use "FA_psicostat_files/figure-latex/""smooth-2".pdf>
+Package pdftex.def Info: "FA_psicostat_files/figure-latex/""smooth-2".pdf  used
+ on input line 529.
+(pdftex.def)             Requested size: 419.75792pt x 290.60162pt.
+
+Overfull \hbox (13.87782pt too wide) in paragraph at lines 529--530
+[][] 
+ []
+
+[9 <./FA_psicostat_files/figure-latex/smooth-1.pdf>]
+<"FA_psicostat_files/figure-latex/""smooth-3".pdf, id=156, 469.755pt x 325.215p
+t>
+File: "FA_psicostat_files/figure-latex/""smooth-3".pdf Graphic file (type pdf)
+<use "FA_psicostat_files/figure-latex/""smooth-3".pdf>
+Package pdftex.def Info: "FA_psicostat_files/figure-latex/""smooth-3".pdf  used
+ on input line 563.
+(pdftex.def)             Requested size: 419.75792pt x 290.60162pt.
+
+Overfull \hbox (13.87782pt too wide) in paragraph at lines 563--564
+[][] 
+ []
+
+[10 <./FA_psicostat_files/figure-latex/smooth-2.pdf>]
+Overfull \hbox (32.46909pt too wide) in paragraph at lines 602--602
+ []\T1/lmtt/m/n/9 ## clusGap(x = as.matrix(dist_mat1), FUNcluster = pam1, K.max
+ = 8,     B = 500, spaceH0 = "original")[] 
+ []
+
+[11 <./FA_psicostat_files/figure-latex/smooth-3.pdf>]
+<"FA_psicostat_files/figure-latex/""number of clusters-1".pdf, id=178, 469.755p
+t x 325.215pt>
+File: "FA_psicostat_files/figure-latex/""number of clusters-1".pdf Graphic file
+ (type pdf)
+<use "FA_psicostat_files/figure-latex/""number of clusters-1".pdf>
+Package pdftex.def Info: "FA_psicostat_files/figure-latex/""number of clusters-
+1".pdf  used on input line 610.
+(pdftex.def)             Requested size: 419.75792pt x 290.60162pt.
+
+Overfull \hbox (13.87782pt too wide) in paragraph at lines 610--611
 [][] 
  []
 
 
-LaTeX Warning: File `ambigua.jpg' not found on input line 251.
+Overfull \hbox (32.46909pt too wide) in paragraph at lines 634--634
+ []\T1/lmtt/m/n/9 ## clusGap(x = as.matrix(dist_mat2), FUNcluster = pam1, K.max
+ = 8,     B = 500, spaceH0 = "original")[] 
+ []
 
+<"FA_psicostat_files/figure-latex/""number of clusters-2".pdf, id=179, 469.755p
+t x 325.215pt>
+File: "FA_psicostat_files/figure-latex/""number of clusters-2".pdf Graphic file
+ (type pdf)
+<use "FA_psicostat_files/figure-latex/""number of clusters-2".pdf>
+Package pdftex.def Info: "FA_psicostat_files/figure-latex/""number of clusters-
+2".pdf  used on input line 642.
+(pdftex.def)             Requested size: 419.75792pt x 290.60162pt.
 
-! Package pdftex.def Error: File `"""ambigua".jpg' not found: using draft setti
-ng.
+Overfull \hbox (13.87782pt too wide) in paragraph at lines 642--643
+[][] 
+ []
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.251 ...aphics[width=0.25\textwidth]{ambigua.jpg}
-                                                   & \includegraphics[width=...
- 
+[12 <./FA_psicostat_files/figure-latex/number of clusters-1.pdf>]
+<"FA_psicostat_files/figure-latex/""fitted curves-1".pdf, id=190, 469.755pt x 3
+25.215pt>
+File: "FA_psicostat_files/figure-latex/""fitted curves-1".pdf Graphic file (typ
+e pdf)
+<use "FA_psicostat_files/figure-latex/""fitted curves-1".pdf>
+Package pdftex.def Info: "FA_psicostat_files/figure-latex/""fitted curves-1".pd
+f  used on input line 704.
+(pdftex.def)             Requested size: 419.75792pt x 290.60162pt.
+
+Overfull \hbox (13.87782pt too wide) in paragraph at lines 704--705
+[][] 
+ []
+
+[13 <./FA_psicostat_files/figure-latex/number of clusters-2.pdf>]
+<"FA_psicostat_files/figure-latex/""fitted curves-2".pdf, id=202, 469.755pt x 3
+25.215pt>
+File: "FA_psicostat_files/figure-latex/""fitted curves-2".pdf Graphic file (typ
+e pdf)
+<use "FA_psicostat_files/figure-latex/""fitted curves-2".pdf>
+Package pdftex.def Info: "FA_psicostat_files/figure-latex/""fitted curves-2".pd
+f  used on input line 714.
+(pdftex.def)             Requested size: 419.75792pt x 290.60162pt.
+
+Overfull \hbox (13.87782pt too wide) in paragraph at lines 714--715
+[][] 
+ []
+
+[14 <./FA_psicostat_files/figure-latex/fitted curves-1.pdf> <./FA_psicostat_fil
+es/figure-latex/fitted curves-2.pdf>]
+<"FA_psicostat_files/figure-latex/""fitted curves-3".pdf, id=217, 469.755pt x 3
+25.215pt>
+File: "FA_psicostat_files/figure-latex/""fitted curves-3".pdf Graphic file (typ
+e pdf)
+<use "FA_psicostat_files/figure-latex/""fitted curves-3".pdf>
+Package pdftex.def Info: "FA_psicostat_files/figure-latex/""fitted curves-3".pd
+f  used on input line 728.
+(pdftex.def)             Requested size: 419.75792pt x 290.60162pt.
+
+Overfull \hbox (13.87782pt too wide) in paragraph at lines 728--729
+[][] 
+ []
+
+<"FA_psicostat_files/figure-latex/""fitted curves-4".pdf, id=218, 469.755pt x 3
+25.215pt>
+File: "FA_psicostat_files/figure-latex/""fitted curves-4".pdf Graphic file (typ
+e pdf)
+<use "FA_psicostat_files/figure-latex/""fitted curves-4".pdf>
+Package pdftex.def Info: "FA_psicostat_files/figure-latex/""fitted curves-4".pd
+f  used on input line 745.
+(pdftex.def)             Requested size: 419.75792pt x 290.60162pt.
+<"FA_psicostat_files/figure-latex/""fitted curves-5".pdf, id=219, 469.755pt x 3
+25.215pt>
+File: "FA_psicostat_files/figure-latex/""fitted curves-5".pdf Graphic file (typ
+e pdf)
+<use "FA_psicostat_files/figure-latex/""fitted curves-5".pdf>
+Package pdftex.def Info: "FA_psicostat_files/figure-latex/""fitted curves-5".pd
+f  used on input line 746.
+(pdftex.def)             Requested size: 419.75792pt x 290.60162pt.
+<"FA_psicostat_files/figure-latex/""fitted curves-6".pdf, id=220, 469.755pt x 3
+25.215pt>
+File: "FA_psicostat_files/figure-latex/""fitted curves-6".pdf Graphic file (typ
+e pdf)
+<use "FA_psicostat_files/figure-latex/""fitted curves-6".pdf>
+Package pdftex.def Info: "FA_psicostat_files/figure-latex/""fitted curves-6".pd
+f  used on input line 747.
+(pdftex.def)             Requested size: 419.75792pt x 290.60162pt.
+
+Overfull \hbox (13.87782pt too wide) in paragraph at lines 745--748
+[][]
+ []
+
+[15 <./FA_psicostat_files/figure-latex/fitted curves-3.pdf>] [16 <./FA_psicosta
+t_files/figure-latex/fitted curves-4.pdf> <./FA_psicostat_files/figure-latex/fi
+tted curves-5.pdf>]
+<"FA_psicostat_files/figure-latex/""fitted curves-7".pdf, id=247, 469.755pt x 3
+25.215pt>
+File: "FA_psicostat_files/figure-latex/""fitted curves-7".pdf Graphic file (typ
+e pdf)
+<use "FA_psicostat_files/figure-latex/""fitted curves-7".pdf>
+Package pdftex.def Info: "FA_psicostat_files/figure-latex/""fitted curves-7".pd
+f  used on input line 760.
+(pdftex.def)             Requested size: 419.75792pt x 290.60162pt.
+<"FA_psicostat_files/figure-latex/""fitted curves-8".pdf, id=248, 469.755pt x 3
+25.215pt>
+File: "FA_psicostat_files/figure-latex/""fitted curves-8".pdf Graphic file (typ
+e pdf)
+<use "FA_psicostat_files/figure-latex/""fitted curves-8".pdf>
+Package pdftex.def Info: "FA_psicostat_files/figure-latex/""fitted curves-8".pd
+f  used on input line 761.
+(pdftex.def)             Requested size: 419.75792pt x 290.60162pt.
+<"FA_psicostat_files/figure-latex/""fitted curves-9".pdf, id=249, 469.755pt x 3
+25.215pt>
+File: "FA_psicostat_files/figure-latex/""fitted curves-9".pdf Graphic file (typ
+e pdf)
+<use "FA_psicostat_files/figure-latex/""fitted curves-9".pdf>
+Package pdftex.def Info: "FA_psicostat_files/figure-latex/""fitted curves-9".pd
+f  used on input line 762.
+(pdftex.def)             Requested size: 419.75792pt x 290.60162pt.
+
+Overfull \hbox (13.87782pt too wide) in paragraph at lines 760--763
+[][]
+ []
+
+[17 <./FA_psicostat_files/figure-latex/fitted curves-6.pdf>] [18 <./FA_psicosta
+t_files/figure-latex/fitted curves-7.pdf> <./FA_psicostat_files/figure-latex/fi
+tted curves-8.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 789.
+[19 <./FA_psicostat_files/figure-latex/fitted curves-9.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 789.
+(./FA_psicostat.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 789.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 789.
+Package rerunfilecheck Info: File `FA_psicostat.out' has not changed.
+(rerunfilecheck)             Checksum: 857ED3CFFDF8822FF54EC29E10FBC429;1687.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 789.
+ ) 
 Here is how much of TeX's memory you used:
- 13169 strings out of 492166
- 190129 string characters out of 6129147
- 305573 words of memory out of 5000000
- 17324 multiletter control sequences out of 15000+600000
- 57720 words of font info for 68 fonts, out of 8000000 for 9000
+ 13481 strings out of 492166
+ 199631 string characters out of 6129147
+ 305078 words of memory out of 5000000
+ 17567 multiletter control sequences out of 15000+600000
+ 80766 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,6n,42p,975b,344s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 34i,12n,42p,1308b,374s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2019/tex
+mf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2019/texmf-dist/fonts/enc/dvi
+ps/lm/lm-mathit.enc}{c:/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathex.en
+c}{c:/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2019
+/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}<c:/texlive/2019/texmf-dist/fonts/type
+1/public/lm/lmbx10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmbx12
+.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/texlive/20
+19/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2019/texmf-dist/font
+s/type1/public/lm/lmmi5.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/lm/l
+mmi6.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><c:/texliv
+e/2019/texmf-dist/fonts/type1/public/lm/lmmib10.pfb><c:/texlive/2019/texmf-dist
+/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public
+/lm/lmr17.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/te
+xlive/2019/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2019/texmf-dis
+t/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/publ
+ic/lm/lmri9.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy5.pfb><c:
+/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy6.pfb><c:/texlive/2019/texmf
+-dist/fonts/type1/public/lm/lmsy9.pfb><c:/texlive/2019/texmf-dist/fonts/type1/p
+ublic/lm/lmtk10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtt9.pfb
+><c:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
+Output written on FA_psicostat.pdf (19 pages, 3122019 bytes).
+PDF statistics:
+ 373 PDF objects out of 1000 (max. 8388607)
+ 284 compressed objects within 3 object streams
+ 35 named destinations out of 1000 (max. 500000)
+ 14534 words of extra memory for PDF output out of 17280 (max. 10000000)
+

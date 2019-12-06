@@ -1,12 +1,11 @@
 ---
 title: "Functional data analysis of eye pupil dilation"
-author: "Paolo Girardi"
-date: "26/11/2019"
+author: "Paolo Girardi, Sara Scrimin and others"
+date: "06/12/2019"
 output: pdf_document
 bibliography: C:/Users/utente/Desktop/Eye_tracker/bibliography.bib
 link-citations: yes
 ---
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -36,62 +35,82 @@ knitr::opts_chunk$set(echo = TRUE)
 \abstract
 In general, methods for correlating pupillary response to the cognitive activity of a subject undergoing an evaluation of cognitive activity are based on average values or analysis of peak activity.
 
-However, in this type of analysis, we lose the temporal form of the data which is a valuable feature because of temporal scale (high temporal scale 250 Hz) or specific trend pattern 
-Eye tracking data contains several features:
+However, in this type of analysis, we lose the temporal form of the data which is a valuable feature because of temporal scale (high temporal scale 250 Hz) or specific trend pattern. Eye tracking data contains several features:
 \begin{itemize}
 \item Eye point of gaze;
 \item Fixation (and relative Area Of Interest -AOI-) and Saccade time periods.
 \item \textbf{Eye pupil dilation}
 \end{itemize}
 
-Differently by the classical approach based on differences on ``averaged'' values over a certain period, we propose a functional clustering model that takes into account the entire behaviour of a eye dilation time series.
+Differently by the classical approach based on differences on ``averaged'' values over a certain period, we propose a functional data clustering approach that takes into account the entire behaviour of a eye dilation time series.
 
 
-\section{Functional data clustering... a gentle introduction}
+\section{1 - Functional data clustering... a gentle introduction}
 The statistical problem is to cluster subjects with common temporal behaviour regarding their eye dilation.
 Let $\bY_i = (Y_i (t_{i,1}),\ldots,Y_i (t_{i,m_i}))'$ a time series of $m_i$ values
 collected for the subject $s_i$, $i=1,\ldots,n$. The value $m_i$ corresponds to the number of observations included in the $i-th$ time series. We suppose to observe $n$ time series and we want to cluster them in $C$ clusters.
-\subsection{Model-based Functional data clustering}
-In a mixture-model based approach to clustering the cluster membership of the i-th time seriesis represented by a latent random vector $\bZ_i=(Z_{i,1},\ldots,Z_{i,C})'$, where $Z_{i,c}=1$ if the time series belongs to the cluster $c$,$Z_{i,c}=0$ otherwise. Then a model for the complete data $(\bY_i,\bZ_i)$, $i=1,\ldots,n$ is specified in a hierarchical way.
-Suppose that the $i$-th time series belongs to the cluster $c$, i.e. $Z_{i,c}=1$ and $Z_{i,c'}=0$ forc'$\ne$ c.
+\subsection{1.1 -  Model-based Functional data clustering}
+In a mixture-model based approach to clustering the cluster membership of the i-th time seriesis represented by a latent random vector $\bZ_i=(Z_{i,1},\ldots,Z_{i,C})'$, where $Z_{i,c}=1$ if the time series belongs to the cluster $c$, $Z_{i,c}=0$ otherwise. Then a model for the complete data $(\bY_i,\bZ_i)$, $i=1,\ldots,n$ is specified in a hierarchical way.
+Suppose that the $i$-th time series belongs to the cluster $c$, i.e. $Z_{i,c}=1$ and $Z_{i,c'}=0$ for c'$\ne$ c.
 
-Given the cluster membership $\bZ_i$,we suppose that $\bY_i$is a discrete and noised measurement of a smooth time-varying curve $f_{c}(t)$, namely
+Given the cluster membership $\bZ_i$, we suppose that $\bY_i$ is a discrete and noised measurement of a smooth time-varying curve $f_{c}(t)$, namely
 $$
 Y_i(t_{i,j})=f_c(t_{i,j})+\varepsilon_{i}(t_{i,j}),\qquad j=1,\ldots,m_i.
 $$
 The smooth function $f_c(t)$ is described by a linear combination of $K$ B-spline basis functions $B_k(t)$, $k=1,\ldots,K$, evaluated at $K-1$ equally spaced in knots, namely
 $$
 f_c(t)=\sum_{k=1}^K \psi_{c,k} B_k(t)
-=\gamma^\top B(x)
+=\gamma^\top B(t)
 $$
 where $\bpsi_{c}=(\psi_{c,1},\ldots, \psi_{c,K})'$ is a vector of unknown parameters.
 
- 
-In view of our application, it does not seem too restrictive to assume that $\varepsilon_i(t_{i,j})$ are temporally independent Gaussian random errors with zero mean and cluster specific variance $\sigma_c^2$. It turns out that time series $\bY_1,\ldots,\bY_n$ are conditionally independent on $\bZ_1,\ldots,\bZ_n$ and 
+ In view of our application, it does not seem too restrictive to assume that $\varepsilon_i(t_{i,j})$ are temporally independent Gaussian random errors with zero mean and cluster specific variance $\sigma_c^2$. It turns out that time series $\bY_1,\ldots,\bY_n$ are conditionally independent on $\bZ_1,\ldots,\bZ_n$ and 
 \begin{equation}\label{eq:mod}
 Y_i(t_{i,j})|\bZ_{i} \sim \mathcal{N}\left(\sum_{k=1}^K \psi_{c,k} B_k(t_{i,j}),\sigma^2_c\right), \quad j=1\ldots,m_i.
  \end{equation}
-\subsection{Two steps Functional data clustering}
-A second different approach called "2 steps - clustering" we performed an unsupervised classification based on measures of the distance between the 2 curves. we calculated a distance matrix, based on the L2 norm between two estimated curves $i$ and $j$ $f_i(t)=\sum_{k=1}^K \psi_{i,k} B_k(t)$ and $f_j(t)=\sum_{k=1}^K \psi_{j,k} B_k(t)$ is calculated as following:
+The clustering involves the membership $Z$ by means of iterative algorithm in order to get the more classification that maximized a given likelihood.
+
+\subsection{1.2 - Two steps Functional data clustering}
+A second different approach is called "2 steps - clustering". The two steps are:
+\begin{itemize}
+\item estimation (functional data and dimensional reduction);
+\item classification.
+\end{itemize}
+In this attempt, we performed an unsupervised classification based on measures of the distance between the 2 curves.
+
+We calculated a distance matrix, based on the L2 norm between two estimated curves $i$ and $j$ $f_i(t)=\sum_{k=1}^K \hat{\psi}_{i,k} B_k(t)$ and $f_j(t)=\sum_{k=1}^K \hat{\psi}_{j,k} B_k(t)$ ($\hat{\psi}$ are the estimated coefficients) is calculated as following:
 \begin{equation}\label{eq:2stepsfun}
-d_{i,j}= \sqrt{(\sum_{k=1}^K \psi_{i,k} B_k(t)-\sum_{k=1}^K \psi_{j,k} B_k(t))^2 }\approx \sqrt{\sum_{k=1}^K (\psi_{i,k}-\psi_{j,k})^2}  \mbox{   } \forall i \neq j,
+d_{i,j}= \sqrt{(\sum_{k=1}^K \hat{\psi}_{i,k} B_k(t)-\sum_{k=1}^K \hat{\psi}_{j,k} B_k(t))^2 }\approx \sqrt{\sum_{k=1}^K (\hat{\psi}_{i,k}-\hat{\psi}_{j,k})^2}  \mbox{   } \forall i \neq j,
  \end{equation}
-where $d_{i_j}$ is an element of distance matrix $D$ based on the euclidean distance. We applied to the distance matrix an algorithm in order to cluster toghether similar curves.
-A summary of the statistical methods proposed for functional data clustering is reported in a review of [@jacques2014] reported in the following figure.
+where $d_{i_j}$ is an element of distance matrix $D$ based on the euclidean distance.
+
+We applied to the distance matrix an algorithm in order to cluster toghether similar curves.
+
+A summary of the statistical methods proposed for functional data clustering is reported in a review of [@jacques2014]; in the following figure the presented summary.
 
 \includegraphics{fig2_preda.jpg}
+\newpage 
 
-\section{Eye tracking dilation dataset}
-We consider a dataset formed by pupil eye dilation records of 25 female childs involved in two trials consisting in the visualization of three images for a total of 18 seconds differing between them only for the ending scene:
+\section{2 - Eye tracking dilation dataset}
+We consider a dataset formed by pupil eye dilation records of 25 female childs involved in two trials consisting in the visualization of 3 images for a total of 18 seconds differing between them only for the ending scene:
 \begin{itemize}
-\item Trial 1: Ambiguous situation - Teacher with bad reaction - \textbf{Child with bad reaction};
-\item Trial 2: Ambiguous situation - Teacher with bad reaction - \textbf{Child with mild reaction}.
+\item Trial 1: Ambiguous situation - Teacher with adverse reaction - \textbf{Child with adverse reaction};
+\item Trial 2: Ambiguous situation - Teacher with adverse reaction - \textbf{Child with sadden reaction}.
 \end{itemize}
-
-\begin{tabular}{cccc}
-\textbf{Trial 1}& \includegraphics[width=0.25\textwidth]{ambigua.jpg} & \includegraphics[width=0.25\textwidth]{maestra cattiva.jpg}& \includegraphics[width=0.25\textwidth]{maestra-ostile-bambino-ostile.jpg}\\
-\textbf{Trial 2}& \includegraphics[width=0.25\textwidth]{ambigua.jpg} &\includegraphics[width=0.25\textwidth]{maestra cattiva.jpg} & \includegraphics[width=0.25\textwidth]{maestra-ostile-bambino-buono.jpg}\\
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+\begin{table}[ht]
+\begin{tabular}{c|c|c}
+& \textbf{Duration of the visualizzation}&\\
+Image 1: 5 secs & Image 1: 3 secs & Image 1: 10 secs\\
+& \textbf{Trial 1}&\\
+\hline
+\includegraphics[width=0.33\textwidth]{ambigua.jpg} & \includegraphics[width=0.33\textwidth]{maestra cattiva.jpg}& \includegraphics[width=0.33\textwidth]{maestra-ostile-bambino-ostile.jpg}\\
+&\textbf{Trial 2}&\\
+\includegraphics[width=0.33\textwidth]{ambigua.jpg} &\includegraphics[width=0.33\textwidth]{maestra cattiva.jpg} & \includegraphics[width=0.33\textwidth]{maestra-ostile-bambino-buono.jpg}\\
 \end{tabular}
+\end{table}
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+
 ```{r carico intro}
 rm(list=ls())
 setwd("C:/Users/utente/Desktop/Eye_tracker/")
@@ -108,10 +127,11 @@ table(db_tf1$id)
 ### but different time points 
 length(table(db_tf1$time))
 ## Marginal distribution ofRight and Left eye dilations
-boxplot(db_tf1$p_dx,db_tf1$p_sx)
+boxplot(db_tf1$p_dx,db_tf1$p_sx,names=c("Right","Left"),ylab="mm")
 ## Right and Left eye dilations are highly correlated
 cor.test(db_tf1$p_dx,db_tf1$p_sx)
-
+plot(db_tf1$p_dx,db_tf1$p_sx,xlab="Right pupil",ylab="Left pupil")
+abline(a=0,b=1,col="red",lty=2)
 ### create the average dilation between two eye
 db_tf1$p<-apply(cbind(db_tf1$p_dx,db_tf1$p_sx),1,mean,na.rm=T)
 db_tf2$p<-apply(cbind(db_tf2$p_dx,db_tf2$p_sx),1,mean,na.rm=T)
@@ -124,19 +144,26 @@ source("C:/Users/utente/Desktop/Eye_tracker/functions.R")
 
 ```
 \section{Moving Average Filter}
-We need to resample the time series.
+An example of a time series on pupil dilatation is reported in the following figure.
+```{r moving example}
+plot(db_tf1$time[db_tf1$id=="F1301" & db_tf1$test=="t1" & db_tf1$type=="Fixation"],db_tf1$p[db_tf1$id=="F1301" & db_tf1$test=="t1"& db_tf1$type=="Fixation"],ylab="Pupil dilation",xlab="time",col=as.numeric(db_tf1$type[db_tf1$id=="F1301" & db_tf1$test=="t1"]),pch=16,ylim=c(2.4,3.1))
+legend("topleft",c("Fixation","Saccade","Unclassified"),col=1:3,pch=16)
+```
+There is a certain grade of variability. The presence of saccade and unclassified moments lead to a very noised time series.
+To overcome this and to get standardized time serie, we need to resample the time series.
 We apply a Moving Average Filter in order to get the same time points for each time series as follow:
 $$Yfiltered_i(t_{i,j})=\frac{\sum_{i \in W_z} Y_i(t_{i,j}) }{ \# W_z} $$
-where $W_z$ is a time windows and $\bigcup_{z=1}^{\infty} W_{i}$ is the entire time window (0-18 seconds)
+where $W_z$ is a time windows and $\bigcup_{z=1}^{\infty} W_{i}$ is the entire time window (0-18 seconds).
+In addition, we scale each time series (mean=0 and var=1) because we are interested to compare only their temporal behaviour.
 ```{r moving average}
 #set dropping first 2 seconds and endings 5 seconds
 min<-2000
 max<-13000
 #sampling each time series at 100 ms
 step<- round((max-min)/100,0)
-# (data vector, subject vector, time vector, time scale, window=(min,max))
-data_sr1<-sampling_regular(db_tf1$p,db_tf1$id,db_tf1$time,step,window=c(min,max))
-data_sr2<-sampling_regular(db_tf2$p,db_tf2$id,db_tf2$time,step,window=c(min,max))
+# (data vector, subject vector, time vector, time scale, window=(min,max),scale=T)
+data_sr1<-sampling_regular(db_tf1$p,db_tf1$id,db_tf1$time,step,window=c(min,max),scale=TRUE)
+data_sr2<-sampling_regular(db_tf2$p,db_tf2$id,db_tf2$time,step,window=c(min,max),scale=TRUE)
 # in output a list formed by a matrix of observation and a regularized time vector
 
 # MA resampled data for the first child
@@ -153,9 +180,13 @@ matplot(data_sr2$t,t(data_sr2$x_mat),type="l",main="Trial 2",ylab="Pupil dilatio
 ```
 Lines are overlapping. It is impossibile to observed different time patterns.
 It seems hard to discover similar curves.
-Next step: Smoothing.
+Next step: Smoothing!
 
-We defined 15 equally distributed knots for the basis of splines. A number 15 knots seems sufficient.
+We defined k=25 equally distributed knots for the basis of splines. A number 25 knots seems sufficient (the strategy is to have a great number of coefficients penalizing them with L2norm of applied to the second derivatives).
+\begin{equation}\label{eq:smoothing pen}
+\widehat{\psi_{c,k}}=argmin \sum_{t=1}^T \left( Y_it-\sum_{k=1}^K \psi_{c,k} B_k(t)\right)^2+\lambda \int  \frac{\partial^2 \psi_{c,k} B_k(t)}{\partial t^2}
+ \end{equation}
+where $\lambda$ is the smoothing parameter that penalized roughness curves.
 The number of smoothing $\lambda$ is chosen by means of the GCV (Generalized Cross validation) criterion. 
 
 ```{r smooth }
@@ -163,26 +194,26 @@ The number of smoothing $\lambda$ is chosen by means of the GCV (Generalized Cro
 # penalizing with L2 norm on second derivatives of coefficients
 # GCV criterion to select the best lambda 
 
-l<-exp(seq(10,20,0.25))
+l<-exp(seq(10,15,0.25))
 
 gcv1<-NULL
 for(i in 1:length(l)){
-gcv1<-c(gcv1,fun_register(data_sr1,lambda=l[i], knots=15,plot=FALSE,register=FALSE)$gcv)
+gcv1<-c(gcv1,fun_register(data_sr1,lambda=l[i], knots=25,plot=FALSE,register=FALSE)$gcv)
 }
 graphics::plot(gcv1,ylab="GCV",xlab="lambda value")
 which.min(gcv1)
 
 gcv2<-NULL
 for(i in 1:length(l)){
-gcv2<-c(gcv2,fun_register(data_sr2,lambda=l[i], knots=15,plot=FALSE,register=FALSE)$gcv)
+gcv2<-c(gcv2,fun_register(data_sr2,lambda=l[i], knots=25,plot=FALSE,register=FALSE)$gcv)
 }
 graphics::plot(gcv2,ylab="GCV",xlab="lambda value")
 which.min(gcv2)
 
 
 # coefficient estimation 
-data_reg1<-fun_register(data_sr1,lambda=l[which.min(gcv1)], knots=15,plot=FALSE,register=FALSE)$data_reg
-data_reg2<-fun_register(data_sr2,lambda=l[which.min(gcv2)], knots=15,plot=FALSE,register=FALSE)$data_reg
+data_reg1<-fun_register(data_sr1,lambda=l[which.min(gcv1)], knots=25,plot=FALSE,register=FALSE)$data_reg
+data_reg2<-fun_register(data_sr2,lambda=l[which.min(gcv2)], knots=25,plot=FALSE,register=FALSE)$data_reg
 
 #example of estimated curve
 plot(data_sr1$t,data_sr1$x_mat[1,],ylab="Pupil dilation",xlab="time")
@@ -200,13 +231,13 @@ dist_mat1<-dist(t(data_reg1$coefs))
 dist_mat2<-dist(t(data_reg2$coefs))
 
 pam1 <- function(x,k) list(cluster = pam(x,k, cluster.only=TRUE,diss=T))
-mod_sel<-clusGap(as.matrix(dist_mat1), FUN = pam1, K.max = 8, B =100)
+mod_sel<-clusGap(as.matrix(dist_mat1), FUN = pam1, K.max = 8, B =500,spaceH0 = "original")
 #useTibs2001SEmax method and SE.factor=1
 print(mod_sel, method="Tibs2001SEmax",SE.factor=1)
 plot(mod_sel)
 
 
-mod_sel<-clusGap(as.matrix(dist_mat2), FUN = pam1, K.max = 8, B =100)
+mod_sel<-clusGap(as.matrix(dist_mat2), FUN = pam1, K.max = 8, B=500,spaceH0 = "original")
 #uso FirstSEmax method
 print(mod_sel, method="Tibs2001SEmax",SE.factor=1)
 plot(mod_sel)
@@ -216,34 +247,36 @@ plot(mod_sel)
 
 
 
-For both trials, Gap statistic suggests 2 clusters. At the end we cluster time series and make appropriate graphs.
+For both trials, Gap statistic suggests 3 clusters. At the end we cluster time series and make appropriate graphs.
 
 ```{r clustering}
 
 
 #two clusterings
-clust1<-pam(as.matrix(dist_mat1),2,diss=T)$clust
-clust2<-pam(as.matrix(dist_mat2),2,diss=T)$clust
+clust1<-pam(as.matrix(dist_mat1),3,diss=T)$clust
+clust2<-pam(as.matrix(dist_mat2),3,diss=T)$clust
 table(clust1)
 table(clust2)
 table(clust1,clust2)
 ```
 \subsection{Results}
-In the first trials we classified 19 time series in the first group, the others (6) in the second one.
-In the second trials we classified 13 and 12 in the group 1 and 2 respectively.
-We can comment in function of different behaviour on temporal profile in each group by trial membership
+In the first trials we classified 16 time series in the first group, 6 in the second one and 3 in the last group
+In the second trials we classified 10, 8 and 7 curves in the group 1, 2 and 3 respectively.
+We can comment in function of the different behaviours on temporal profile in each group by trial membership.
 ```{r fitted curves}
-par(mfrow=c(2,1))
-plot_cluster_curves2(data_reg1,clust1)
-legend("topleft",c("cluster 1","cluster 2"),lty=1, col=1:2)
-abline(v=c(5000,8000))
-plot_cluster_curves2(data_reg2,clust2)
-legend("topleft",c("cluster 1","cluster 2"),lty=1, col=1:2)
-abline(v=c(5000,8000))
-par(mfrow=c(1,1))
 
-par(mfrow=c(1,1))
-for (i in 1:2){ 
+plot_cluster_curves2(data_reg1,clust1)
+legend("topleft",c("cluster 1","cluster 2","cluster 3"),lty=1, col=1:3)
+abline(v=c(5000,8000))
+
+plot_cluster_curves2(data_reg2,clust2)
+legend("topleft",c("cluster 1","cluster 2","cluster 3"),lty=1, col=1:3)
+abline(v=c(5000,8000))
+
+
+
+par(mfrow=c(3,2),mar = c(2, 2, 2, 2),mgp=c(5,1,0))
+for (i in 1:3){ 
 plot(data_reg1[clust1==i],lty=1)
 title(paste("trial 1 - cluster",i, sep=""))
 plot(data_reg2[clust2==i],lty=1)
@@ -253,13 +286,14 @@ par(mfrow=c(1,1))
 
 
 
-for (i in 1:2){ 
+for (i in 1:max(clust1)){ 
 plot_cluster_curves2(data_reg1[i %in% clust1],clust1==i,lwd=2)
 abline(v=c(5000,8000))
 title(paste("trial 1 cluster",i))
 for(j in 1:table(clust1)[i]) points(data_sr1$t,data_sr1$x_mat[clust1==i,][j,],cex=0.5)
+}
 
-
+for (i in 1:max(clust2)){ 
 plot_cluster_curves2(data_reg2[i %in% clust2],clust2==i,lwd=2) 
 abline(v=c(5000,8000))
 title(paste("trial 2 cluster",i))
@@ -267,4 +301,14 @@ for(j in 1:table(clust2)[i]) points(data_sr2$t,data_sr2$x_mat[clust2==i,][j,],ce
 }
 
 ```
+\section{Conclusions}
+To be continued....
+
+
+\section{Other}
+
+R-packages for EyeTrackerData
+
+http://www.eyetracking-r.com/
+
 #References
